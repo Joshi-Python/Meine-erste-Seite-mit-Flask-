@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}MeineSeite{% endblock %}</title>
+    <style>
+        h1 {
+            color: darkblue;
+        }
+        b {
+            color: grey;
+        }
+        h3 {
+            color: darkblue;
+        }
+    </style>
+
+<body>
+    <header>
+        <h1>JOSHUA PICK 🐍</h1>
+        <b>Python Certified Associate Programmer</b>
+         <nav>
+             <ul>
+                 <li><a href="{{ url_for('about') }}">Über mich</a></li>
+                 <li><a href="{{ url_for('contact') }}">Kontakt</a></li>
+                 <li><a href="{{ url_for('projects') }}">Projekte</a></li>
+                 <li><a href="{{ url_for('about_hobby') }}">Meine Hobbies</a></li>
+             </ul>
+         </nav>
+     </header>
+
+     <main>
+        {% block content %}{% endblock %}
+     </main>
+
+     <footer>
+         <h3>&copy; 2025 Joshua Pick</h3>
+     </footer>
+</body>
+</html>
